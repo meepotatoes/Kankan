@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+    @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+    #{$context} & {
+        @content;
+    }
+}
+
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "mobile" {
+        @media screen and (max-width: 575px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == "xxs" {
+        @media screen and (max-width: 480px) {
+          @content;
+      }
+  }
+
+  @if $breakpoint == "xs" {
+    @media screen and (max-width: 767px) {
+      @content;
+  }
+}
+
+@if $breakpoint == "xs-sm" {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "xs-md" {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "1599" {
+    @media screen and (max-width: 1599px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "sm" {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "sm-lg" {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "sm-md" {
+    @media (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "md" {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "md-lg" {
+    @media screen and (min-width: 992px)  {
+        @content;
+    }
+}
+
+@if $breakpoint == "lg" {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "md2" {
+    @media (min-width: 992px) and (max-width: 1225px) {
+        @content;
+    }
+}
+
+@if $breakpoint == "small-lg" {
+    @media (min-width: 1200px) and (max-width: 1439px) {
+        @content;
+    }
+}
+}
+
+
+

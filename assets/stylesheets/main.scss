@@ -1,0 +1,22 @@
+// 1. Configuration and helpers
+@import 'fonts/fonts',
+        'utils/mixins',
+        'utils/base';
+
+// 2. Sections
+@import 'sections/header',
+        'sections/footer',
+        'sections/hero-banner',
+        'sections/testimonial',
+        'sections/badges',
+        'sections/image-with-text',
+        'sections/reviews',
+        'sections/ig-feed-gallery',
+        'sections/featured-products';
+
+//3. Utils 
+
+@import 'utils/font-awesome';
+
+
+ 

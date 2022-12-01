@@ -1,0 +1,75 @@
+section.testimonial{
+    padding:25px 0px;
+    .container{
+        .testimonial_boxlist{
+            @include respond-to('xs-sm'){
+                padding: 0px 20px;
+                max-width: 600px;
+                margin: auto;
+            }
+            ul.list{
+                display:flex;
+                flex-wrap: nowrap;
+                @include respond-to('xs-sm'){
+                flex-direction: column;
+                }
+                li{
+                    
+                    padding: 0px 15px;
+                    text-align:center;
+                    flex: 0 0 50%;
+                    position:relative;
+                    @include respond-to('xs-sm'){
+                        &:first-child{
+                            margin-bottom:50px;
+                        }
+                    }
+                    &:before{
+                        content: "";
+                        background-image: url(../../assets/images/Qoute.png);
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        top: -20px;
+                        z-index: -1;
+                        opacity: 0.3;
+                    }
+                
+                .content-testimonial{
+                    .content-testimonial__text{
+                        line-height:1.7;
+                    }
+                    .content-testimonial__logo{
+                        
+                        max-width: 80px;
+                        
+                        display: block;
+                        margin: auto;
+                        margin-top: 25px;
+                    }
+                    .content-testimonial__name{
+                        font-style: italic;
+                        display: inline-block;
+                        position:relative;
+                        margin-top: 25px;
+                        &:before{
+                            content: "";
+                            height: 2px;
+                            width: 18px;
+                            background-color: var(--black);
+                            position: absolute;
+                            left: -20px;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

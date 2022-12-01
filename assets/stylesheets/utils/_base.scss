@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #181800;
+}
+
+body {
+  font-family: "Brown LL", sans-serif;
+  font-size: 16px;
+  color: var(--black);
+}
+
+p,
+a,
+span {
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  &.fs-24 {
+    font-size: 24px;
+  }
+  &.fs-20{
+    font-size:20px;
+  }
+  &.fs-18{
+    font-size:18px;
+  }
+}
+
+a {
+  color: var(--black);
+  &:hover {
+    text-decoration: none;
+    color: var(--black);
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 36px;
+}
+h3{
+  font-size:22px;
+}
+
+a.button {
+  background-color: var(--black);
+  padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  display: inline-block;
+  line-height: 1;
+  color: #fff;
+}
+
+.container {
+  &.w-large {
+    max-width: 1260px;
+  }
+  &.w-small {
+    max-width: 1040px;
+  }
+}
+
+.bg-cover{
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.hidden-sm{
+  @include respond-to('xs-sm'){
+    display:none!important;
+  }
+}
+
+$navWidth: 18em;
+
+
+
+.btn {
+  all: unset;
+
+  &--open {
+    color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: color 300ms ease;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+.nav__list{
+    display: block!important;
+}
+.nav {
+  background: #fff;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX($navWidth);
+  transition: all 300ms ease;
+  visibility: hidden;
+  width: $navWidth;
+
+  &--is-visible {
+    transform: translateX(0);
+    visibility: visible;
+    z-index: 33333;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 2em;
+  }
+  &__item {
+    &:first-child {
+      margin-top: 3em;
+    }
+  }
+  &__link {
+    color: #181800;
+    display: block;
+    font-weight: 300;
+    font-size: 0.95rem;
+    padding: 1.125em 0;
+    text-decoration: none;
+    &--featured {
+      background: rgba(255,255,255,.15);
+      border-radius: 4em;
+      box-shadow: 1px 1px 10px rgba(0,0,0,.125);
+      font-weight: 600;
+      font-size: .75rem;
+      letter-spacing: .125em;
+      margin: 1em 0;
+      padding: 1em 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &__btn--close-nav {
+    color: #181800;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+}
+
+.hidden-desk{
+  @include respond-to('md-lg'){
+    display:none!important;
+  }
+}

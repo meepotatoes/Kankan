@@ -1,0 +1,114 @@
+footer {
+    background-color: var(--black);
+    padding-top: 90px;
+    padding-bottom: 40px;
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 250px;
+        @include respond-to('xs-sm'){
+            min-height:initial;
+            text-align:center;
+            margin-bottom: 100px;
+        }
+        a.site-logo {
+            img {
+                width: 130px;
+                height: 80px;
+            }
+        }
+        .socials {
+            display: flex;
+            column-gap: 15px;
+            flex-wrap: wrap;
+            @include respond-to('xs-sm'){
+                justify-content: center;
+            }
+            a {
+                color: #fff;
+                width: 20px;
+                height: 20px;
+                display: block;
+            }
+        }
+    }
+    .center {
+        display: flex;
+        flex-wrap: wrap;
+        @include respond-to('xs-sm'){
+            margin-left: 15%;
+        }
+        @include respond-to('xs'){
+            margin-left: initial;
+            display: initial;
+            text-align:center;
+        }
+        .footer-menu {
+            flex: 1;
+            @include respond-to('xs'){
+                margin-bottom: 50px;
+            }
+            p.menu-label {
+                color: #fff;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            ul.menu {
+                li {
+                    margin-bottom: 15px;
+                    line-height: 1;
+                    a {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include respond-to('xs-sm'){
+            align-items: center;
+        }
+        .subscribe {
+            @include respond-to('xs-sm'){
+                text-align: center;
+    margin-top: 50px;
+            }
+            p {
+                color: #fff;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+            form {
+                display: flex;
+                flex-wrap: nowrap;
+                input[type="email"] {
+                    color: #fff;
+                    background-color: var(--blac);
+                    border: 2px solid #fff;
+                    padding: 13px;
+                    line-height: 1;
+                }
+                input[type="submit"] {
+                    padding: 13px 30px;
+                    line-height: 1;
+                    border: 2px solid #fff;
+                    background-color: #fff;
+                    color: var(--black);
+                    border-left: 0;
+                }
+            }
+        }
+        p.copyright {
+            color: #fff;
+            text-align: right;
+            @include respond-to('xs-sm'){
+                margin-top:50px;
+            }
+        }
+    }
+}

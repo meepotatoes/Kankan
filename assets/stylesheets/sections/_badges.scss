@@ -1,0 +1,26 @@
+section.badges{
+    padding:75px 0px;
+    .container{
+        ul.multicolumn-badges{
+            display: flex;
+            justify-content: space-between;
+            @include respond-to('xs-sm'){
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            .multicolumn-badges__wrapper{
+                @include respond-to('xs-sm'){
+                    flex: 0 0 33%;
+                    padding: 10px;
+                }
+                .multicolumn-content{
+                    img{
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

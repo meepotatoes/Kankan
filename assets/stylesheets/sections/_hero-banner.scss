@@ -1,0 +1,21 @@
+section.hero-banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px 30px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        min-height: 750px;
+        justify-content: center;
+        h1, p {
+            color: #fff;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p.subtitle {
+            margin-bottom: 40px;
+        }
+    }
+}
